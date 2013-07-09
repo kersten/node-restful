@@ -21,6 +21,7 @@ describe('Model', function() {
     var posts = restful.model('posts');
     posts.allowed_methods.should.have.property('get');
     posts.methods(['get', 'post', 'put'])
+      .update({})
       .delete({})
       .template('/idk/where/this/goes/');
     posts.allowed_methods.should.include('get');
